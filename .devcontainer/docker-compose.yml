@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  firefox:
+    image: selenium/standalone-chrome
+    shm_size: 2gb
+    ports:
+      - 4444:4444
+      - 5900:5900
+    networks:
+      - mynetwork
+
+  rustlibs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:cached
+    networks:
+      - mynetwork
+      
+networks:
+  mynetwork:
+    driver: bridge

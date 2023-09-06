@@ -1,0 +1,13 @@
+{
+	"name": "Rustlibs",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "rustlibs",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash"
+			}
+		}
+	}
+}
