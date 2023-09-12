@@ -2,7 +2,7 @@ version: "3"
 
 services:
   firefox:
-    image: selenium/standalone-chrome
+    image: selenium/standalone-firefox
     shm_size: 2gb
     ports:
       - 4444:4444
@@ -11,9 +11,7 @@ services:
       - mynetwork
 
   rustlibs:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: rust:buster
     command: sleep infinity
     volumes:
       - ..:/workspace:cached

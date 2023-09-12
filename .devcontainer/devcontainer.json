@@ -1,5 +1,5 @@
 {
-	"name": "Rustlibs",
+	"name": "webdriver",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "rustlibs",
 	"workspaceFolder": "/workspace",
